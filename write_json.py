@@ -1,11 +1,16 @@
 import json
 
 d = {"Food_Trucks": 
-         [{"Food_Truck_A": {"Position": {"Longitude": 122.255, "Latitude": 37.4630}}},
-          {"Food_Truck_B": {"Position": {"Longitude": 122.96233, "Latitude": 37.93368}}},
-          {"Food_Truck_C": {"Position": {"Longitude": 122.11499, "Latitude": 37.14496}}},
-          {"Food_Truck_D": {"Position": {"Longitude": 122.80592, "Latitude": 37.80404}}},
-          {"Food_Truck_E": {"Position": {"Longitude": 122.66089, "Latitude": 37.34253}}}
+         [{"Food_Truck": {"Position": {"Longitude": 122.255, "Latitude": 37.4630},
+                          "Name": "Grillenium Falcon"}},
+          {"Food_Truck": {"Position": {"Longitude": 122.96233, "Latitude": 37.93368},
+                          "Name": "Grill 'Em All"}},
+          {"Food_Truck": {"Position": {"Longitude": 122.11499, "Latitude": 37.14496},
+                          "Name": "Burger She Wrote"}},
+          {"Food_Truck": {"Position": {"Longitude": 122.80592, "Latitude": 37.80404},
+                          "Name": "Bon Me"}},
+          {"Food_Truck": {"Position": {"Longitude": 122.66089, "Latitude": 37.34253},
+                          "Name": "Dogzilla"}}
           ],
      "Suggestion_Location_Primary": {"Position": {"Longitude": 122.34253, "Latitude": 37.5319},
                                      "Event": {"Type": "Ball Game",
