@@ -1,1 +1,1 @@
-web: gunicorn location_recommendation:app
+web: gunicorn hello:app
