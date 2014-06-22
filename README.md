@@ -1,19 +1,4 @@
-HackSummit 2014 - Kiva Challenge
+SmallBizDev 2014
 ==========
 
-The backend for a KivaMe, a personalized loan recommendation system created at Hack Summit 2014.
-
-How to run
-==========
-* Clone the repository.
-* Go to the directory and run:
-```
-sudo pip install -r requirements.txt
-```
-* Edit kiva_recommendations/kiva_recommendations/settings.py
-Replace `KIVA_CLIENT_ID` with your Kiva client iD
-Replace `KIVA_CLIENT_SECRET` with your Kiva client secret.
-* Run:
-```
-python kiva_recommendations/manage.py runserver
-```
+The backend for a Sparkly, a decision support system for small businesses created at SmallBizDev 2014 hosted by Capital One Labs.
