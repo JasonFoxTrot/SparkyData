@@ -26,7 +26,7 @@ food_trucks =
     }
 
 @app.route('/', methods = ['GET'])
-def get_tasks():
+def location_recommendation():
     return jsonify(food_trucks)
 
 if __name__ == '__main__':
