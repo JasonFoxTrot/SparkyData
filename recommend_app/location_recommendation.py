@@ -4,7 +4,7 @@ from random import choice
 app = Flask(__name__)
 
 def get_truck_gps():
-  # Should be from SF data API - https://data.sfgov.org/Permitting/Mobile-Food-Facility-Permit/rqzj-sfat
+  # TODO: import from SF data API - https://data.sfgov.org/Permitting/Mobile-Food-Facility-Permit/rqzj-sfat
   possible_gps_locations = [{"Longitude": -122.4041544, "Latitude": 37.70937546},
                             {"Longitude": -122.4714119, "Latitude": 37.71000333},
                             {"Longitude": -122.4552219, "Latitude": 37.71019302},
@@ -22,14 +22,14 @@ def get_truck_gps():
   return choice(possible_gps_locations)
 
 def get_truck_name():
-  # Should be from SF data API - https://data.sfgov.org/Permitting/Mobile-Food-Facility-Permit/rqzj-sfat
-  # And wrapped in truck class ;)
+  # TODO: import from SF data API - https://data.sfgov.org/Permitting/Mobile-Food-Facility-Permit/rqzj-sfat
+  # TODO: wrap functions in food_truck class ;)
   possible_names = ["Grillenium Falcon", "Grill 'Em All", "Burger She Wrote", "Bon Me", "Dogzilla"]
   
   return choice(possible_names)
 
 def get_locations():
-  
+  # TODO: import from http://www.wunderground.com/weather/api/
   weather_options_game = ["Sunny", "Sunny", "Partly Cloudy", "Partly Cloudy", "Cloudy"]
   weather_options_other = ["Sunny", "Partly Cloudy", "Partly Cloudy", "Cloudy", "Rainy"]
 
@@ -63,7 +63,7 @@ def get_locations():
 def not_found(error=None):
     message = {
             'status': 404,
-            'message': 'Not Found: ' + request.url,
+            'message': 'Requested data not found'
     }
     resp = jsonify(message)
     resp.status_code = 404
