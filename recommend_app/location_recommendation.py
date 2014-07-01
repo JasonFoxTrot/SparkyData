@@ -1,10 +1,18 @@
+#!/usr/bin/env python
+""" Provides location recommendations 
+
+Ingests external data APIs and creates an internal RESTful API for the website 
+frontend (see - https://github.com/foodtruck360/SparklyCapital)
+"""
+
 from flask import Flask, jsonify
 from random import choice
 
 app = Flask(__name__)
 
 def get_truck_gps():
-  # TODO: import from SF data API - https://data.sfgov.org/Permitting/Mobile-Food-Facility-Permit/rqzj-sfat
+  # TODO:  Replace mocked data with import from SF data API
+  # https://data.sfgov.org/Permitting/Mobile-Food-Facility-Permit/rqzj-sfat
   possible_gps_locations = [{"Longitude": -122.4041544, "Latitude": 37.70937546},
                             {"Longitude": -122.4714119, "Latitude": 37.71000333},
                             {"Longitude": -122.4552219, "Latitude": 37.71019302},
@@ -22,14 +30,16 @@ def get_truck_gps():
   return choice(possible_gps_locations)
 
 def get_truck_name():
-  # TODO: import from SF data API - https://data.sfgov.org/Permitting/Mobile-Food-Facility-Permit/rqzj-sfat
+  # TODO:  Replace mocked data with import from SF data API
+  # https://data.sfgov.org/Permitting/Mobile-Food-Facility-Permit/rqzj-sfat
   # TODO: wrap functions in food_truck class ;)
   possible_names = ["Grillenium Falcon", "Grill 'Em All", "Burger She Wrote", "Bon Me", "Dogzilla"]
   
   return choice(possible_names)
 
 def get_locations():
-  # TODO: import from http://www.wunderground.com/weather/api/
+  # TODO:  Replace mocked data with import wunderground API
+  # http://www.wunderground.com/weather/api/
   weather_options_game = ["Sunny", "Sunny", "Partly Cloudy", "Partly Cloudy", "Cloudy"]
   weather_options_other = ["Sunny", "Partly Cloudy", "Partly Cloudy", "Cloudy", "Rainy"]
 
